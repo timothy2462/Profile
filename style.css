@@ -162,42 +162,40 @@ section{
     font-size: 3.5rem;
 }
 
-.text-animate{
-    width: 22.8rem;
-    position: relative;
-}
+/* change text */
 
-.text-animate h2{
-    font-size: 2rem;
-    font-weight: 700;
-    margin-bottom: 1rem;
-    color: transparent;
-    -webkit-text-stroke: 0.1vw #770753;
-    background: var(--gradient-color-bg);
-    background-repeat: no-repeat;
-    -webkit-background-clip: text;
-    background-position: 0 0;
-    transition: .6s;
-    letter-spacing: 2px;
-    animation: moveText 3s linear infinite;
-    animation-delay: 2s;
+.change-text h3{
+    font-size: 1.5rem;
+    font-weight: 600;
 }
-
-.text-animate h2::before{
-    content: "";
+.change-text h3{
+    display: inline-flex;
+    margin: 0;
+    vertical-align: top;
+}
+.change-text .word{
     position: absolute;
-    top: 7px;
-    left: -3px;
-    width: 0;
-    height: 70%;
-    border-right: 2px solid var(--main-color);
-    animation: moveCursorText 3s linear infinite;
-    animation-delay: 2s;
+    display: flex;
+    opacity: 0;
+}
+
+.change-text h3 .word .letter{
+    transform-origin:center center 25px ;
+}
+.change-text h3 .word .letter.out{
+    transform: rotateX(90deg);
+    transition: 0.32s cubic-bezier(0.6, 0, 0.7, 0.2);
+}
+.change-text h3 .word .letter.in{
+    transition: 0.38s ease;
+}
+.change-text h3 .word .letter.behind{
+    transform: rotateX(-90deg);
 }
 
 
 .hero-info p{
-    font-size: .9rem;
+    font-size: 1rem;
     color: var(--font-color);
     line-height: 1.5rem;
 }
