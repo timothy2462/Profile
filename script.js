@@ -223,3 +223,22 @@ ScrollReveal().reveal(
   ".allServices,.portfolio-gallery,.blog-box,footer,.img-hero",
   { origin: "bottom" }
 );
+
+// getting form input on my google spread sheet
+const scriptURL =
+  "https://script.google.com/macros/s/AKfycby4zVv98t0CzhlzsVBh2Bwf7ikc0-h_dlIPx11tjc6T0Q93sMx605WzXBUNG92c-s6yjg/exec";
+const form = document.forms["submit-to-google-sheet"];
+const msg = document.getElementById("msg");
+
+form.addEventListener("submit", (e) => {
+  e.preventDefault();
+  fetch(scriptURL, { method: "POST", body: new FormData(form) })
+    .then((response) => {
+      msg.innerHTML = "Message sent sucessfully :)";
+      setTimeout(function () {
+        msg.innerHTML = "";
+      }, 5000);
+      form.reset();
+    })
+    .catch((error) => console.error("Error!", error.message));
+});
