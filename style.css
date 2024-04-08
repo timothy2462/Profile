@@ -1086,7 +1086,7 @@ footer{
     }
     .portfolio-img img{
         width: 100%;
-        height: 100%;
+        height: 180px;
     }
     .portfolio-gallery{
         grid-template-columns: repeat(auto-fill,minmax(250px , 1fr));
