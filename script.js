@@ -242,3 +242,18 @@ form.addEventListener("submit", (e) => {
     })
     .catch((error) => console.error("Error!", error.message));
 });
+
+// Spinner when form is submitting
+document
+  .getElementById("submit-to-google-sheet")
+  .addEventListener("submit", function (event) {
+    event.preventDefault();
+
+    const spinner = document.createElement("div");
+    spinner.className = "spinner";
+    document.getElementById("spinnerContainer").appendChild(spinner);
+
+    setTimeout(() => {
+      document.getElementById("spinnerContainer").removeChild(spinner);
+    }, 2000);
+  });

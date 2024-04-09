@@ -494,7 +494,7 @@
             <h2 class="heading">Contact Me</h2>
             <span>get in touch with me</span>
           </div>
-          <form name="submit-to-google-sheet">
+          <form id="submit-to-google-sheet" name="submit-to-google-sheet">
             <div class="input-box">
               <input type="text" placeholder="First Name" name="Firstname" />
               <input type="text" placeholder="Last Name" name="Lastname" />
@@ -503,7 +503,11 @@
             <input type="text" placeholder="Subject" name="Subject" />
             <textarea name="Message" id="" rows="10"> </textarea>
             <div class="formBtn">
-              <button type="submit" class="btn">Send Message</button>
+              <button type="submit" class="btn" id="submitBtn">
+                Send Message
+              </button>
+              <div id="spinnerContainer"></div>
+              <!-- Container for the spinner -->
             </div>
             <span id="msg"></span>
           </form>
