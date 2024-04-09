@@ -255,5 +255,5 @@ document
 
     setTimeout(() => {
       document.getElementById("spinnerContainer").removeChild(spinner);
-    }, 2000);
+    }, 3000);
   });
