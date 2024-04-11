@@ -358,7 +358,7 @@ section{
     display: flex;
     justify-content: space-between;
     align-items: center;
-    gap: 1rem;
+    gap: 3rem;
 }
 
 .about .about-img{
@@ -368,6 +368,7 @@ section{
 .about .about-img .aboutHero{
     width: 40vw;
     height: auto;
+    border-radius: 30px;
 }
 
 .about-img .ring{
@@ -1112,6 +1113,10 @@ footer{
     }
     .about .about-img .aboutHero{
         width: 100%;
+        
+    }
+    .about{
+        gap: 1rem;
     }
     .proposal img{
         width: 52vw;
@@ -1192,6 +1197,9 @@ footer{
     .contact-info form .input-box{
         display: block;
     }
+   .about{
+    gap: 1rem;
+   }
     .input-box input {
         width: 100%;
     }
