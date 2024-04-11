@@ -279,6 +279,10 @@ section{
     animation-delay: 3s;
 
 }
+.floating-ball{
+    animation: floatImage 4s ease-in-out infinite;
+    animation-delay: 3s; 
+}
 
 .img-hero img{
     position: relative;
@@ -1088,7 +1092,6 @@ footer{
         transform: translateY(0);
     }
 }
-
 
 
 
