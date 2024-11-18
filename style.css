@@ -149,6 +149,8 @@ section{
     align-items: center;
     grid-gap: 4em;
     background: var(--gradient-white-bg2);
+    padding-top: 0;
+    margin-top: 0;
 }
 
 .hero-info{
